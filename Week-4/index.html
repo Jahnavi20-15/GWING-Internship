@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+  <div class="contact-page">
+    <div class="contact-card">
+      <div class="contact-info">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Fill out the form and we'll get back to you shortly.</p>
+        <form id="contactForm">
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
+          <input type="email" id="email" name="email" placeholder="Your Email" required />
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+          <p id="status"></p>
+        </form>
+      </div>
+      <div class="contact-image">
+        <img src="https://png.pngtree.com/background/20210710/original/pngtree-contact-us-poster-design-background-template-picture-image_1064102.jpg" alt="Contact illustration">
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
