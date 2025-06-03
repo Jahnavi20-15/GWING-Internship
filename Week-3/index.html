@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beautiful Image Slider</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      display: block;
+    }
+
+    .buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .btn {
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    @media (max-width: 600px) {
+      .btn {
+        padding: 8px 14px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider-container">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="https://www.clairethomasphotography.com/wp-content/uploads/2020/05/CT.Alaska.Sept16.0231.jpg" alt="Mountains"></div>
+      <div class="slide"><img src="https://wallpapercave.com/wp/QGsncry.jpg" alt="Beach"></div>
+      <div class="slide"><img src="http://cdn.wallpapersafari.com/85/13/FYqMsD.jpg" alt="Forest"></div>
+      <div class="slide"><img src="https://images.hdqwalls.com/wallpapers/arabian-desert-dubai-n4.jpg" alt="Desert"></div>
+      <div class="slide"><img src="https://images2.alphacoders.com/562/562933.jpg" alt="Waterfall"></div>
+    </div>
+
+    <div class="buttons">
+      <button class="btn" onclick="prevSlide()">❮ Prev</button>
+      <button class="btn" onclick="nextSlide()">Next ❯</button>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.getElementById('slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    let index = 0;
+
+    function showSlide(i) {
+      index = (i + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(index + 1);
+    }
+
+    function prevSlide() {
+      showSlide(index - 1);
+    }
+
+    // Optional: Auto-play
+    setInterval(() => {
+      nextSlide();
+    }, 5000); // Change slide every 5 seconds
+  </script>
+
+</body>
+</html>
