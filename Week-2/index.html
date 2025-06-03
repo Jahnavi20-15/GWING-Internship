@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Myntra Shopping Mall</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="https://www.freelogovectors.net/wp-content/uploads/2023/01/myntra-logo-freelogovectors.net_.png" alt="Myntra Logo" />
+      </a>
+      <span class="nav-toggle" id="navToggle">&#9776;</span>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <h1>Welcome to Myntra Shopping Mall</h1>
+    <p>
+      Myntra is your ultimate fashion destination for the latest trends and styles.
+      Explore a wide range of products tailored to your unique taste.
+    </p>
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer class="footer">
+    <div class="footer-wave"></div>
+
+    <div class="footer-container">
+      <!-- Company Info -->
+      <div class="footer-section">
+        <h3 class="footer-title">Myntra</h3>
+        <p>Subscribe to our newsletter for the latest trends, offers, and exclusive updates from Myntra Shopping Mall.</p>
+      </div>
+
+      <!-- Office Info -->
+      <div class="footer-section">
+        <h4>Office</h4>
+        <p>Myntra HQ,<br>Bangalore, India</p>
+        <p>Email: <a href="mailto:januviswan@gmail.com">januviswan@gmail.com</a></p>
+        <p>Phone: +91 7569983104</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/7911211/facebook-icon-md.png" alt="Facebook" /></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" /></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram" /></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733561.png" alt="LinkedIn" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">&copy; 2025 Myntra Shopping Mall. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.querySelector(".nav-links");
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
